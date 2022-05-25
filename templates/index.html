@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Delivery{% endblock %}
+{% block content %}
+<h3>Lista de produtos</h3>
+
+<div class="menu">
+    <hr>
+    <a href="#">Comidas</a>
+    <a href="#">Bebidas</a>
+    <a href="#">Sobremesas</a>
+    <hr>
+</div>
+
+<div class="container" >
+    {%for produto in produtos %}
+    <div class="box">
+            {{produto.nome}}<br>
+    <img src="{{produto.imagem.url}}" alt="" width="150"><p></p>
+    R$ {{produto.preco}}
+    <hr>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}
